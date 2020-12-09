@@ -6,8 +6,8 @@
 
 ##### test with CSV
 
-dfCsv <- read.csv2("BddBruteConfinement.csv", header = TRUE)
+df <- read.csv2("BddBruteConfinement.csv", header = TRUE, encoding = 'UTF-8')
 ## Get the stucture of dataframe
-str(dfCsv)
+str(df)
 ## Get the summary of dataframe
-summary(dfCsv)
+summary(df)
