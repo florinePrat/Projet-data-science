@@ -1,99 +1,102 @@
-Country;County;Department;Value
-France; Auvergne-Rhône-Alpes;Ain;2
-France; Hauts-de-France;Aisne;
-France; Auvergne-Rhône-Alpes;Allier;
-France; Provence-Alpes-Côte d'Azur;Alpes-de-Haute-Provence;
-France; Provence-Alpes-Côte d'Azur;Hautes-Alpes;
-France; Provence-Alpes-Côte d'Azur;Alpes-Maritimes;6
-France; Auvergne-Rhône-Alpes;Ardèche;1
-France; Grand Est;Ardennes;
-France; Occitanie;Ariège;
-France; Grand Est;Aube;
-France; Occitanie;Aude;1
-France; Occitanie;Aveyron;
-France; Provence-Alpes-Côte d'Azur;Bouches-du-Rhône;4
-France; Normandy;Calvados;
-France; Auvergne-Rhône-Alpes;Cantal;
-France; Nouvelle-Aquitaine;Charente;
-France; Nouvelle-Aquitaine;Charente-Maritime;1
-France; Centre-Val de Loire;Cher;1
-France; Nouvelle-Aquitaine;Corrèze;1
-France; Corsica;Corse-du-Sud;
-France; Corsica;Haute-Corse;
-France; Bourgogne-Franche-Comté;Côte-d'Or;1
-France;Brittany Brittany;Côtes-d'Armor;1
-France; Nouvelle-Aquitaine;Creuse;3
-France; Nouvelle-Aquitaine;Dordogne;1
-France; Bourgogne-Franche-Comté;Doubs;2
-France; Auvergne-Rhône-Alpes;Drôme;1
-France; Normandy;Eure;
-France; Centre-Val de Loire;Eure-et-Loir;1
-France;Brittany Brittany;Finistère;
-France; Occitanie;Gard;10
-France; Occitanie;Haute-Garonne;2
-France; Occitanie;Gers;11
-France; Nouvelle-Aquitaine;Gironde;4
-France; Occitanie;Hérault;3
-France;Brittany Brittany;Ille-et-Vilaine;1
-France; Centre-Val de Loire;Indre;2
-France; Centre-Val de Loire;Indre-et-Loire;7
-France; Auvergne-Rhône-Alpes;Isère;1
-France; Bourgogne-Franche-Comté;Jura;4
-France; Nouvelle-Aquitaine;Landes;
-France; Centre-Val de Loire;Loir-et-Cher;3
-France; Auvergne-Rhône-Alpes;Loire;3
-France; Auvergne-Rhône-Alpes;Haute-Loire;5
-France; Pays de la Loire;Loire-Atlantique;2
-France; Centre-Val de Loire;Loiret;
-France; Occitanie;Lot;1
-France; Nouvelle-Aquitaine;Lot-et-Garonne;1
-France; Occitanie;Lozère;1
-France; Pays de la Loire;Maine-et-Loire;3
-France; Normandy;Manche;1
-France; Grand Est;Marne;
-France; Grand Est;Haute-Marne;4
-France; Pays de la Loire;Mayenne;
-France; Grand Est;Meurthe-et-Moselle;
-France; Grand Est;Meuse;
-France;Brittany Brittany;Morbihan;
-France; Grand Est;Moselle;3
-France; Bourgogne-Franche-Comté;Nièvre;1
-France; Hauts-de-France;Nord;
-France; Hauts-de-France;Oise;1
-France; Normandy;Orne;
-France; Hauts-de-France;Pas-de-Calais;3
-France; Auvergne-Rhône-Alpes;Puy-de-Dôme;
-France; Nouvelle-Aquitaine;Pyrénées-Atlantiques;3
-France; Occitanie;Hautes-Pyrénées;2
-France; Occitanie;Pyrénées-Orientales;
-France; Grand Est;Bas-Rhin;10
-France; Grand Est;Haut-Rhin;1
-France; Auvergne-Rhône-Alpes;Rhône;2
-France; Auvergne-Rhône-Alpes;Lyon Metropolis;1
-France; Bourgogne-Franche-Comté;Haute-Saône;1
-France; Bourgogne-Franche-Comté;Saône-et-Loire;1
-France; Pays de la Loire;Sarthe;6
-France; Auvergne-Rhône-Alpes;Savoie;2
-France; Auvergne-Rhône-Alpes;Haute-Savoie;3
-France; Île-de-France;Paris;4
-France; Normandy;Seine-Maritime;1
-France; Île-de-France;Seine-et-Marne;1
-France; Île-de-France;Yvelines;1
-France; Nouvelle-Aquitaine;Deux-Sèvres;1
-France; Hauts-de-France;Somme;4
-France; Occitanie;Tarn;1
-France; Occitanie;Tarn-et-Garonne;
-France; Provence-Alpes-Côte d'Azur;Var;2
-France; Provence-Alpes-Côte d'Azur;Vaucluse;1
-France; Pays de la Loire;Vendée;3
-France; Nouvelle-Aquitaine;Vienne;
-France; Nouvelle-Aquitaine;Haute-Vienne;5
-France; Grand Est;Vosges;12
-France; Bourgogne-Franche-Comté;Yonne;1
-France; Bourgogne-Franche-Comté;Territoire de Belfort;4
-France; Île-de-France;Essonne;5
-France; Île-de-France;Hauts-de-Seine;
-France; Île-de-France;Seine-Saint-Denis;11
-France; Île-de-France;Val-de-Marne;0
-France; Île-de-France;Val-d'Oise;0
-;;;0
+Country;County;Department;;Value;;
+France; Auvergne-Rhône-Alpes;Ain;;25,0%;1;01 - Ain - Bourg-en-bresse
+France; Hauts-de-France;Aisne;;0,0%;2;02 - Aisne - Laon
+France; Auvergne-Rhône-Alpes;Allier;;0,0%;3;03 - Allier - Moulins
+France; Provence-Alpes-Côte d'Azur;Alpes-de-Haute-Provence;;0,0%;4;04 - Alpes-de-Haute-Provence - Digne-les-bains
+France; Provence-Alpes-Côte d'Azur;Hautes-Alpes;;0,0%;5;05 - Hautes-alpes - Gap
+France; Provence-Alpes-Côte d'Azur;Alpes-Maritimes;;20,0%;6;06 - Alpes-maritimes - Nice
+France; Auvergne-Rhône-Alpes;Ardèche;;25,0%;7;07 - Ardèche - Privas
+France; Grand Est;Ardennes;;0,0%;8;08 - Ardennes - Charleville-mézières
+France; Occitanie;Ariège;;0,0%;9;09 - Ariège - Foix
+France; Grand Est;Aube;;0,0%;10;10 - Aube - Troyes
+France; Occitanie;Aude;;50,0%;11;11 - Aude - Carcassonne
+France; Occitanie;Aveyron;;0,0%;12;12 - Aveyron - Rodez
+France; Provence-Alpes-Côte d'Azur;Bouches-du-Rhône;;9,3%;13;13 - Bouches-du-Rhône - Marseille
+France; Normandy;Calvados;;0,0%;14;14 - Calvados - Caen
+France; Auvergne-Rhône-Alpes;Cantal;;0,0%;15;15 - Cantal - Aurillac
+France; Nouvelle-Aquitaine;Charente;;0,0%;16;16 - Charente - Angoulême
+France; Nouvelle-Aquitaine;Charente-Maritime;;10,0%;17;17 - Charente-maritime - La rochelle
+France; Centre-Val de Loire;Cher;;25,0%;18;18 - Cher - Bourges
+France; Nouvelle-Aquitaine;Corrèze;;33,3%;19;19 - Corrèze - Tulle
+France; Corsica;Corse-du-Sud;;0,0%;20;2a - Corse-du-sud - Ajaccio
+France; Corsica;Haute-Corse;;0,0%;20;2b - Haute-Corse - Bastia
+France; Bourgogne-Franche-Comté;Côte-d'Or;;6,3%;21;21 - Côte-d'Or - Dijon
+France;Bretagne;Côtes-d'Armor;;14,3%;22;22 - Côtes-d'Armor - Saint-brieuc
+France; Nouvelle-Aquitaine;Creuse;;0,0%;23;23 - Creuse - Guéret
+France; Nouvelle-Aquitaine;Dordogne;;33,3%;24;24 - Dordogne - Périgueux
+France; Bourgogne-Franche-Comté;Doubs;;10,0%;25;25 - Doubs - Besançon
+France; Auvergne-Rhône-Alpes;Drôme;;10,0%;26;26 - Drôme - Valence
+France; Normandy;Eure;;9,1%;27;27 - Eure - Évreux
+France; Centre-Val de Loire;Eure-et-Loir;;0,0%;28;28 - Eure-et-loir - Chartres
+France;Brittany Brittany;Finistère;;10,0%;29;29 - Finistère - Quimper
+France; Occitanie;Gard;;0,0%;30;30 - Gard - Nîmes
+France; Occitanie;Haute-Garonne;;20,4%;31;31 - Haute-garonne - Toulouse
+France; Occitanie;Gers;;22,2%;32;32 - Gers - Auch
+France; Nouvelle-Aquitaine;Gironde;;20,0%;33;33 - Gironde - Bordeaux
+France; Occitanie;Hérault;;10,5%;34;34 - Hérault - Montpellier
+France;Brittany Brittany;Ille-et-Vilaine;;25,0%;35;35 - Ille-et-vilaine - Rennes
+France; Centre-Val de Loire;Indre;;25,0%;36;36 - Indre - Châteauroux
+France; Centre-Val de Loire;Indre-et-Loire;;22,2%;37;37 - Indre-et-loire - Tours
+France; Auvergne-Rhône-Alpes;Isère;;20,0%;38;38 - Isère - Grenoble
+France; Bourgogne-Franche-Comté;Jura;;25,0%;39;39 - Jura - Lons-le-saunier
+France; Nouvelle-Aquitaine;Landes;;50,0%;40;40 - Landes - Mont-de-marsan
+France; Centre-Val de Loire;Loir-et-Cher;;0,0%;41;41 - Loir-et-cher - Blois
+France; Auvergne-Rhône-Alpes;Loire;;25,0%;42;42 - Loire - Saint-étienne
+France; Auvergne-Rhône-Alpes;Haute-Loire;;50,0%;43;43 - Haute-loire - Le puy-en-velay
+France; Pays de la Loire;Loire-Atlantique;;20,8%;44;44 - Loire-atlantique - Nantes
+France; Centre-Val de Loire;Loiret;;22,2%;45;45 - Loiret - Orléans
+France; Occitanie;Lot;;0,0%;46;46 - Lot - Cahors
+France; Nouvelle-Aquitaine;Lot-et-Garonne;;20,0%;47;47 - Lot-et-garonne - Agen
+France; Occitanie;Lozère;;0,0%;48;48 - Lozère - Mende
+France; Pays de la Loire;Maine-et-Loire;;14,3%;49;49 - Maine-et-loire - Angers
+France; Normandy;Manche;;33,3%;50;50 - Manche - Saint-lô
+France; Grand Est;Marne;;37,5%;51;51 - Marne - Châlons-en-champagne
+France; Grand Est;Haute-Marne;;33,3%;52;52 - Haute-marne - Chaumont
+France; Pays de la Loire;Mayenne;;0,0%;53;53 - Mayenne - Laval
+France; Grand Est;Meurthe-et-Moselle;;30,8%;54;54 - Meurthe-et-moselle - Nancy
+France; Grand Est;Meuse;;0,0%;55;55 - Meuse - Bar-le-duc
+France;Brittany Brittany;Morbihan;;0,0%;56;56 - Morbihan - Vannes
+France; Grand Est;Moselle;;0,0%;57;57 - Moselle - Metz
+France; Bourgogne-Franche-Comté;Nièvre;;0,0%;58;58 - Nièvre - Nevers
+France; Hauts-de-France;Nord;;7,7%;59;59 - Nord - Lille
+France; Hauts-de-France;Oise;;5,6%;60;60 - Oise - Beauvais
+France; Normandy;Orne;;0,0%;61;61 - Orne - Alençon
+France; Hauts-de-France;Pas-de-Calais;;16,7%;62;62 - Pas-de-calais - Arras
+France; Auvergne-Rhône-Alpes;Puy-de-Dôme;;0,0%;63;63 - Puy-de-dôme - Clermont-ferrand
+France; Nouvelle-Aquitaine;Pyrénées-Atlantiques;;27,3%;64;64 - Pyrénées-atlantiques - Pau
+France; Occitanie;Hautes-Pyrénées;;0,0%;65;65 - Hautes-Pyrénées - Tarbes
+France; Occitanie;Pyrénées-Orientales;;33,3%;66;66 - Pyrénées-orientales - Perpignan
+France; Grand Est;Bas-Rhin;;14,3%;67;67 - Bas-rhin - Strasbourg
+France; Grand Est;Haut-Rhin;;0,0%;68;68 - Haut-rhin - Colmar
+France; Auvergne-Rhône-Alpes;Rhône;;15,9%;69;69 - Rhône - Lyon
+France; Bourgogne-Franche-Comté;Haute-Saône;;50,0%;70;70 - Haute-saône - Vesoul
+France; Bourgogne-Franche-Comté;Saône-et-Loire;;28,6%;71;71 - Saône-et-loire - Mâcon
+France; Pays de la Loire;Sarthe;;20,0%;72;72 - Sarthe - Le mans
+France; Auvergne-Rhône-Alpes;Savoie;;10,0%;73;73 - Savoie - Chambéry
+France; Auvergne-Rhône-Alpes;Haute-Savoie;;5,9%;74;74 - Haute-savoie - Annecy
+France; Île-de-France;Paris;;14,0%;75;75 - Paris - Paris
+France; Normandy;Seine-Maritime;;11,8%;76;76 - Seine-maritime - Rouen
+France; Île-de-France;Seine-et-Marne;;10,0%;77;77 - Seine-et-marne - Melun
+France; Île-de-France;Yvelines;;13,3%;78;78 - Yvelines - Versailles
+France; Nouvelle-Aquitaine;Deux-Sèvres;;14,3%;79;79 - Deux-sèvres - Niort
+France; Hauts-de-France;Somme;;12,5%;80;80 - Somme - Amiens
+France; Occitanie;Tarn;;14,3%;81;81 - Tarn - Albi
+France; Occitanie;Tarn-et-Garonne;;25,0%;82;82 - Tarn-et-garonne - Montauban
+France; Provence-Alpes-Côte d'Azur;Var;;21,1%;83;83 - Var - Toulon
+France; Provence-Alpes-Côte d'Azur;Vaucluse;;8,3%;84;84 - Vaucluse - Avignon
+France; Pays de la Loire;Vendée;;0,0%;85;85 - Vendée - La roche-sur-yon
+France; Nouvelle-Aquitaine;Vienne;;25,0%;86;86 - Vienne - Poitiers
+France; Nouvelle-Aquitaine;Haute-Vienne;;8,3%;87;87 - Haute-vienne - Limoges
+France; Grand Est;Vosges;;25,0%;88;88 - Vosges - Épinal
+France; Bourgogne-Franche-Comté;Yonne;;0,0%;89;89 - Yonne - Auxerre
+France; Bourgogne-Franche-Comté;Territoire de Belfort;;0,0%;90;90 - Territoire de belfort - Belfort
+France; Île-de-France;Essonne;;12,8%;91;91 - Essonne - Évry
+France; Île-de-France;Hauts-de-Seine;;30,0%;92;92 - Hauts-de-seine - Nanterre
+France; Île-de-France;Seine-Saint-Denis;;4,8%;93;93 - Seine-Saint-Denis - Bobigny
+France; Île-de-France;Val-de-Marne;;14,8%;94;94 - Val-de-marne - Créteil
+France; Île-de-France;Val-d'Oise;;13,9%;95;95 - Val-d'oise - Pontoise
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
