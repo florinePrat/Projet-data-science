@@ -1,0 +1,98 @@
+Country;County;Department;Value
+France; Auvergne-Rhône-Alpes;Ain;16
+France; Hauts-de-France;Aisne;3
+France; Auvergne-Rhône-Alpes;Allier;1
+France; Provence-Alpes-Côte d'Azur;Alpes-de-Haute-Provence;8
+France; Provence-Alpes-Côte d'Azur;Hautes-Alpes;5
+France; Provence-Alpes-Côte d'Azur;Alpes-Maritimes;63
+France; Auvergne-Rhône-Alpes;Ardèche;6
+France; Grand Est;Ardennes;5
+France; Occitanie;Ariège;1
+France; Grand Est;Aube;5
+France; Occitanie;Aude;7
+France; Occitanie;Aveyron;4
+France; Provence-Alpes-Côte d'Azur;Bouches-du-Rhône;67
+France; Normandy;Calvados;6
+France; Auvergne-Rhône-Alpes;Cantal;2
+France; Nouvelle-Aquitaine;Charente;2
+France; Nouvelle-Aquitaine;Charente-Maritime;14
+France; Centre-Val de Loire;Cher;6
+France; Nouvelle-Aquitaine;Corrèze;8
+France; Corsica;Corse-du-Sud;1
+France; Corsica;Haute-Corse;27
+France; Bourgogne-Franche-Comté;Côte-d'Or;11
+France;Brittany Brittany;Côtes-d'Armor;15
+France; Nouvelle-Aquitaine;Creuse;18
+France; Nouvelle-Aquitaine;Dordogne;27
+France; Bourgogne-Franche-Comté;Doubs;14
+France; Auvergne-Rhône-Alpes;Drôme;14
+France; Normandy;Eure;18
+France; Centre-Val de Loire;Eure-et-Loir;22
+France;Brittany Brittany;Finistère;96
+France; Occitanie;Gard;18
+France; Occitanie;Haute-Garonne;93
+France; Occitanie;Gers;67
+France; Nouvelle-Aquitaine;Gironde;23
+France; Occitanie;Hérault;7
+France;Brittany Brittany;Ille-et-Vilaine;20
+France; Centre-Val de Loire;Indre;70
+France; Centre-Val de Loire;Indre-et-Loire;6
+France; Auvergne-Rhône-Alpes;Isère;24
+France; Bourgogne-Franche-Comté;Jura;2
+France; Nouvelle-Aquitaine;Landes;32
+France; Centre-Val de Loire;Loir-et-Cher;15
+France; Auvergne-Rhône-Alpes;Loire;51
+France; Auvergne-Rhône-Alpes;Haute-Loire;18
+France; Pays de la Loire;Loire-Atlantique;4
+France; Centre-Val de Loire;Loiret;10
+France; Occitanie;Lot;13
+France; Nouvelle-Aquitaine;Lot-et-Garonne;8
+France; Occitanie;Lozère;24
+France; Pays de la Loire;Maine-et-Loire;11
+France; Normandy;Manche;3
+France; Grand Est;Marne;26
+France; Grand Est;Haute-Marne;2
+France; Pays de la Loire;Mayenne;7
+France; Grand Est;Meurthe-et-Moselle;11
+France; Grand Est;Meuse;1
+France;Brittany Brittany;Morbihan;52
+France; Grand Est;Moselle;27
+France; Bourgogne-Franche-Comté;Nièvre;11
+France; Hauts-de-France;Nord;15
+France; Hauts-de-France;Oise;9
+France; Normandy;Orne;27
+France; Hauts-de-France;Pas-de-Calais;3
+France; Auvergne-Rhône-Alpes;Puy-de-Dôme;26
+France; Nouvelle-Aquitaine;Pyrénées-Atlantiques;29
+France; Occitanie;Hautes-Pyrénées;6
+France; Occitanie;Pyrénées-Orientales;122
+France; Grand Est;Bas-Rhin;6
+France; Grand Est;Haut-Rhin;18
+France; Auvergne-Rhône-Alpes;Rhône;7
+France; Auvergne-Rhône-Alpes;Lyon Metropolis;20
+France; Bourgogne-Franche-Comté;Haute-Saône;18
+France; Bourgogne-Franche-Comté;Saône-et-Loire;67
+France; Pays de la Loire;Sarthe;27
+France; Auvergne-Rhône-Alpes;Savoie;57
+France; Auvergne-Rhône-Alpes;Haute-Savoie;46
+France; Île-de-France;Paris;14
+France; Normandy;Seine-Maritime;14
+France; Île-de-France;Seine-et-Marne;10
+France; Île-de-France;Yvelines;6
+France; Nouvelle-Aquitaine;Deux-Sèvres;30
+France; Hauts-de-France;Somme;16
+France; Occitanie;Tarn;5
+France; Occitanie;Tarn-et-Garonne;18
+France; Provence-Alpes-Côte d'Azur;Var;17
+France; Provence-Alpes-Côte d'Azur;Vaucluse;22
+France; Pays de la Loire;Vendée;9
+France; Nouvelle-Aquitaine;Vienne;73
+France; Nouvelle-Aquitaine;Haute-Vienne;96
+France; Grand Est;Vosges;25
+France; Bourgogne-Franche-Comté;Yonne;49
+France; Bourgogne-Franche-Comté;Territoire de Belfort;61
+France; Île-de-France;Essonne;11
+France; Île-de-France;Hauts-de-Seine;
+France; Île-de-France;Seine-Saint-Denis;
+France; Île-de-France;Val-de-Marne;
+France; Île-de-France;Val-d'Oise;
