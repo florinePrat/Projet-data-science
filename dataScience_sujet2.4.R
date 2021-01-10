@@ -6,41 +6,39 @@
 
 ##### test with CSV
 
-df <- read.csv2("BddBruteConfinement.csv", header = TRUE, encoding = 'UTF-8')
+df <- read.csv2("df_Colonnes_Impactantes2.csv", header = TRUE, encoding = 'UTF-8')
 ## Get the stucture of dataframe
+df$change2rm <- as.logical(df$change2rm)
 str(df)
 ## Get the summary of dataframe
 summary(df)
 ### head 
 head(df)
-# graphique - croisement 2à2
-pairs(df[,c(1,2,5)])
+attach(df)
 
-dft <- df[,-c(1:9,11,12,21:32,43:47,54:68,74,86,88,123,124,136:138)]
-
-## try to get only numeric df
-
-nums <- unlist(lapply(dft, is.numeric))  
-dfNum <- dft[,nums]
-dfNum.cr <- scale(dfNum, center = T, scale = T)
-d.dfNum <- dist(dfNum.cr)
-cah.ward <- hclust(d.dfNum, method = "ward.D2")
-plot(cah.ward)
-
-#dendrogramme avec matérialisation des groupes
-rect.hclust(cah.ward,k=4)
-#découpage en 4 groupes
-groupes.cah <- cutree(cah.ward,k=4)
-#liste des groupes
-print(sort(groupes.cah))
+plot(df$Tranche_âge)
 
 
-### Il faut faire du supevisé lol
-#k-means
+tab <- table(df$Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020.., df$X.U.FEFF.Situation.familiale)
+cprop(tab)
 
-gk-means <- kmeans(dfNum.cr, centers=4, nstart = 5)
+tab2 <- table(df$change2rm, df$CSP.du.membre)
+tab2
+cprop(tab2)
+barplot(cprop(tab, total = FALSE),main = "Changement de 2rm en fonction de la CSP")
 
-""
-## Question à enlever : 1/2/3/(4)/5/6/(7)/8/9/(11)/12//21/(22)/[23-27]/[28-32]/[43-47]/[54-58]/[59-63]/([64-68])/74/86/88/(123)/(124)/136/137/138
 
 
+
+
+ggplot(data = df) + geom_bar(aes(x=CSP.du.membre, y=change2rm, fill=change),position="fill", stat='identity') +theme_bw()
+
+
+
+weight_plot <- ggplot(data=df, mapping= aes(x=Age.du.membre)) +
+  ggtitle("Histogram of weight population", "By gender") +
+  geom_histogram(mapping= aes(color=Aviez.vous.l.intention.de.changer.de.2.roues.motorisé.en.2020.., fill= Aviez.vous.l.intention.de.changer.de.2.roues.motorisé.en.2020..), alpha=0.6) +
+  theme_bw()
+    
+    
+weight_plot    

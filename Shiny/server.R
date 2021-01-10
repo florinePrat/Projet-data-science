@@ -16,143 +16,106 @@ library(maptools)
 library(broom)
 library(rgdal)
 library(RColorBrewer)
+library(shinyWidgets)
+library(questionr)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
     
-    data(Glass)
-    
-    Glass.reshaped <- reshape2::melt(Glass[,6:10], id.vars="Type")
-    
-    google <- rownames_to_column(data.frame(getSymbols("GOOG", auto.assign = FALSE)))
-    facebook <- rownames_to_column(data.frame(getSymbols("FB", auto.assign = FALSE)))
-    twitter <- rownames_to_column(data.frame(getSymbols("TWTR", auto.assign = FALSE)))
-    amazon <- rownames_to_column(data.frame(getSymbols("AMZN", auto.assign = FALSE)))
-    apple <- rownames_to_column(data.frame(getSymbols("AAPL", auto.assign = FALSE)))
-    df_ts <- bind_rows(google, facebook, amazon, apple, twitter)
-
-    df_ts <- df_ts %>% gather(measure, value, -rowname, na.rm=TRUE) %>%
-        separate(measure, into=c("symbol", "measure"), sep="\\.") %>%
-        spread(measure,value) %>%
-        rename(date = rowname) %>%
-        mutate(date = ymd(date)) %>%
-        filter(date >= "2018-10-09") %>%
-        group_by(symbol) %>%
-        arrange(date) %>%
-        mutate(growth = Adjusted - first(Adjusted), growth_percent = (Adjusted - first(Adjusted))/first(Adjusted)*100) %>%
-        mutate(base_price = Adjusted[date == "2018-10-09"], growth_from_base = Adjusted-base_price,growth_percent_from_base=growth_from_base/base_price*100)
-
+    df <- read.csv2("df_Colonnes_Impactantes2.csv", header = TRUE, encoding = 'UTF-8')
     
     
     output$irisPlot <- renderPlot({
         
-        if(!is.null(input$species)) {
-            
-            ggplot(data=subset(iris,Species %in% c(input$species)), aes(Sepal.Length, y=Sepal.Width, color=Species)) +
-                geom_point(aes(shape = Species, color = Species), size =3) + stat_smooth(method = input$meth) +facet_grid(~Species,scale='free_y')+ ggtitle("Linear modeling of Sepal.width against Sepal.Length (IRIS) \n By Species")+ xlim(input$x) + ylim(input$y)+theme_bw()
         
+        if(!is.null(input$changementCsp)) {
+            
+            cspDf <- filter(df, df$CSP.du.membre %in% c(input$changementCsp))
+            
+            tab <- table(cspDf$change2rm, cspDf$CSP.du.membre)
+            cprop(tab)
+            barplot(cprop(tab, total = FALSE, ),main = "Changement de 2rm en fonction de la CSP du membre", col = c("lightblue", "mistyrose"), legend = c('oui', 'non'), args.legend = list(x = "topright"))
+            
+            #ggplot(data = cspDf) + geom_bar(aes(x=CSP.du.membre, y=change2rm, fill=change2rm),position="stack", stat='identity') 
         }
 
     })
     
+    output$familyPlot <- renderPlot({
+        
+        
+        if(!is.null(input$changementFamily)) {
+            
+            familyDf <- filter(df, df$Situation.familiale %in% c(input$changementFamily), Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020.. %in% c(input$changement2rm))
+            
+            tab <- table(familyDf$Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020.., familyDf$Situation.familiale)
+            cprop(tab)
+            barplot(cprop(tab, total = FALSE, ),main = "Changement de 2rm en fonction de la situation familiale", col = c("lightblue", "mistyrose", "lightcyan",
+                                                                                                                          "lavender", "cornsilk"), legend = c(input$changement2rm), args.legend = list(x = "topright"))
+            
+           #ggplot(data = newDf) + geom_bar(aes(x=X.U.FEFF.Situation.familiale, y=Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020.., fill=Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020..),position="stack", stat='identity') 
+        }
+        
+    })
+    
     output$weightPlot <- renderPlot({
 
-        if(!is.null(input$sexHist)) {
-
-            wei <- filter(weight, sex %in% input$sexHist)
+        if(!is.null(input$changementAge)) {
             
-
-            cmean <- wei %>% group_by(sex) %>% summarise(mean = mean(weight))
-
-            weight_plot <- ggplot(data= wei, mapping= aes(x=weight)) +
-                ggtitle("Histogram of weight population", "By gender") +
-                geom_histogram(mapping= aes(color=sex, fill= sex), alpha=0.2, position="identity", binwidth = 0.1) +
+            
+            ageDf <- filter(df, df$Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020.. %in% c(input$changementAge))
+            
+            age_plot <- ggplot(data=ageDf, mapping= aes(x=Age.du.membre)) +
+                ggtitle("Histograme de l age des membres", "Par reponses a la question : Aviez vous l intention de changer de 2rm en 2020") +
+                geom_histogram(mapping= aes(colour=Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020.., fill=Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020..), alpha=0.6) +
                 theme_bw()
-
-            if(input$meanHist) {
-                weight_plot + geom_vline(data= cmean, mapping=aes(xintercept = mean, color = sex), linetype= "dashed", size = 1.5)
-            }
-            else {
-                weight_plot
-            }
+            
+            
+            age_plot  
+            
 
         }
 
     })
 
     output$densityPlot <- renderPlot({
-
-        if(!is.null(input$sexDensity)) {
-
-            wei <- filter(weight, sex %in% input$sexDensity)
-
-            cmean <- wei %>% group_by(sex) %>% summarise(mean = mean(weight))
-
-            weight_plot <- ggplot(data= wei, mapping= aes(x=weight)) +
-                ggtitle("Density of weight population", "By gender") +
-                geom_density(mapping= aes(color=sex, fill= sex), alpha= 0.2) +
+        if(!is.null(input$changementAgeDensity)) {
+            
+            
+            ageDf <- filter(df, df$Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020.. %in% c(input$changementAgeDensity))
+            
+            age_plot <- ggplot(data=ageDf, mapping= aes(x=Age.du.membre)) +
+                ggtitle("Densite de l age des membres", "Par reponses a la question : Aviez vous l intention de changer de 2rm en 2020") +
+                geom_density(mapping= aes(colour=Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020.., fill=Aviez.vous.l.intention.de.changer.de.2.roues.motorise.en.2020..), alpha=0.6) +
                 theme_bw()
-
-            if(input$meanDensity) {
-                weight_plot + geom_vline(data= cmean, mapping=aes(xintercept = mean, color = sex), linetype= "dashed", size = 1.5)
-            }
-            else {
-                weight_plot
-            }
-
+            
+            
+            age_plot  
+            
+            
         }
-
-    })
-
-    output$glassPlot <- renderPlot({
-
-        ggplot(data = Glass, aes(Type, Ca, color= Type)) +
-            ggtitle("Calcium distribution inside observed glasses", "By type") +
-            geom_boxplot() +
-            theme_bw() 
-
-    })
-
-    output$glassPlot2 <- renderPlot({
-
-        ggplot(data = Glass.reshaped, aes(Type, value, color= Type)) +
-            ggtitle("Boxplots of glasses characteristics regarding their type", "By chimical components") +
-            geom_boxplot() +
-            facet_wrap(facets= vars(variable), scales= "free_y") +
-            theme_bw() 
 
     })
     
-    output$timeSeries <- renderPlot({
-
-        if(!is.null(input$firms1)) {
-
-            ggplot(data = subset(subset(df_ts, symbol %in% input$firms1)), mapping= aes(x= date, y= growth_percent, color = symbol)) +
-            ggtitle("Evolution of growth", "By Symbol") +
-            xlab("Date") +
-            ylab("Growth (in %)") +
-            geom_line() +
-            theme_linedraw()
-
+    output$densityPlot2 <- renderPlot({
+        if(!is.null(input$changementAgeDensity2)) {
+            
+            
+            ageDf <- filter(df, df$change2rm %in% c(input$changementAgeDensity2))
+            
+            age_plot <- ggplot(data=ageDf, mapping= aes(x=Age.du.membre)) +
+                ggtitle("Densite de l age des membres", "Par reponses simplifiee a la question : Aviez vous l intention de changer de 2rm en 2020") +
+                geom_density(mapping= aes(colour=change2rm, fill=change2rm), alpha=0.6) +
+                theme_bw()
+            
+            
+            age_plot  
+            
+            
         }
-
+        
     })
 
-    output$adjustedTimeSeries <- renderPlot({
-
-        if(!is.null(input$firms2)) {
-
-            ggplot(data = subset(subset(df_ts, symbol %in% input$firms2), date > "2020-10-09"), mapping= aes(x= date, y= Adjusted, color = symbol)) +
-            ggtitle("Evolution of the adjuted value", "By Symbol") +
-            xlab("Date") +
-            ylab("Growth") +
-            geom_line() +
-            geom_errorbar(mapping= aes(ymin= Low, ymax= High), width= 0.3) +
-            theme_linedraw()
-
-        }
-
-    })
     
 
 })

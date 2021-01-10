@@ -1,0 +1,12 @@
+name: shiny
+title:
+username:
+account: florine-pratlong
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3458329
+bundleId: 4079401
+url: https://florine-pratlong.shinyapps.io/shiny/
+when: 1610306110.93385
+asMultiple: FALSE
+asStatic: FALSE
